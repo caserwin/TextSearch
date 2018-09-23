@@ -1,9 +1,3 @@
-/*
- * CheckUI.java
- *
- * Created on __DATE__, __TIME__
- */
-
 package gui;
 
 import java.awt.event.MouseAdapter;
@@ -11,7 +5,6 @@ import java.awt.event.MouseEvent;
 import java.io.IOException;
 import java.util.List;
 import javaBean.TFIDFbean;
-
 import javax.swing.GroupLayout;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -19,27 +12,19 @@ import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 
-/**
- * 
- * @author __USER__
- */
 public class CheckUITFIDF extends JFrame {
-	private JPanel jPanel1 = new JPanel();;
+	private JPanel jPanel1 = new JPanel();
 	private JScrollPane jScrollPane1 = new JScrollPane();
 	private JTable jTable1 = new JTable();
 	private static List<TFIDFbean> TFIDFbeanlist = null;
 
-	/** Creates new form CheckUI */
 	public CheckUITFIDF(List<TFIDFbean> TFIDFbeanlist) {
-		this.TFIDFbeanlist = TFIDFbeanlist;
+		CheckUITFIDF.TFIDFbeanlist = TFIDFbeanlist;
 		initComponents();
 		this.setLocationRelativeTo(null);
 		this.setSize(600, 300);
 	}
 
-	/**
-	 * @function:
-	 */
 	private void jTable1Event() {
 		int i = jTable1.getSelectedRow();
 		try {
@@ -51,12 +36,14 @@ public class CheckUITFIDF extends JFrame {
 	}
 
 	private void initComponents() {
-		int sum = 0; // 统计计数
+		// 统计计数
+		int sum = 0;
 		this.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
 		this.setTitle("TFIDF前30个相关文件");
 		Object[][] data = null;
 		String[] columnName = { "编号", "文件路径", "相关性" };
 		DefaultTableModel dtm = new DefaultTableModel(data, columnName) {
+			@Override
 			public boolean isCellEditable(int row, int column) {
 				return false;// 返回true表示能编辑，false表示整个jtable不能被编辑
 			}

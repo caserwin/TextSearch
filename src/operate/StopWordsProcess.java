@@ -6,6 +6,9 @@ import java.io.InputStreamReader;
 import java.util.HashSet;
 import java.util.Set;
 
+/**
+ * @author hduxyd
+ */
 public class StopWordsProcess {
 	private static Set<String> stopWordsSet = new HashSet<String>();
 	private String stopWordsPath = "";
@@ -54,7 +57,6 @@ public class StopWordsProcess {
 
 	/**
 	 * @function:判断是不是停止词
-	 * @param 传入一个set集合
 	 */
 	public Set<String> dropStopWords(Set<String> oldWords) {
 		Set<String> set = new HashSet<String>();

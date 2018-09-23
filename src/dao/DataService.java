@@ -1,57 +1,46 @@
-/**
- * 
- */
 package dao;
 
 import gui.IfIschinese;
-
+import javaBean.TFIDFbean;
+import javaBean.TFbean;
+import javaBean.WordBean;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
-import java.util.LinkedHashMap;
 import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Set;
 
-import javaBean.TFIDFbean;
-import javaBean.TFbean;
-import javaBean.WordBean;
-
 /******************************************
- * @function：
  * @author hduxyd
  * @data:2014-5-11下午05:54:14
- * @department：杭州电子科技大学通信工程学院
  * @note:
  ******************************************/
 public class DataService {
 
-	Connection connection = null;
-	PreparedStatement pre = null;
-	ResultSet result = null;
+	private Connection connection = null;
+	private PreparedStatement pre = null;
+	private ResultSet result = null;
 
 	/**
 	 * @function:
-	 * @param wordBeans
-	 * @return
 	 */
 	public boolean addtoDB(List<WordBean> wordBeans) {
 		boolean is = false;
-		JDBC jdbc = new JDBC();
 		System.out.println(wordBeans.size());
 		try {
-			connection = jdbc.getConnection();
+			connection = JDBC.getConnection();
 			connection.setAutoCommit(false);  
 			pre = connection.prepareStatement("insert into TB(filepath,word,times,TF,TF_IDF,pinyin) values(?,?,?,?,?,?)");
-			for (int i = 0; i < wordBeans.size(); i++) {
-				pre.setString(1, wordBeans.get(i).getFilepath());
-				pre.setString(2, wordBeans.get(i).getWord());
-				pre.setInt(3, wordBeans.get(i).getTimes());
-				pre.setDouble(4, wordBeans.get(i).getTF());
-				pre.setDouble(5, wordBeans.get(i).getTFIDF());
-				pre.setString(6, wordBeans.get(i).getPinyin());
+			for (WordBean wordBean : wordBeans) {
+				pre.setString(1, wordBean.getFilepath());
+				pre.setString(2, wordBean.getWord());
+				pre.setInt(3, wordBean.getTimes());
+				pre.setDouble(4, wordBean.getTF());
+				pre.setDouble(5, wordBean.getTFIDF());
+				pre.setString(6, wordBean.getPinyin());
 				pre.addBatch();
 			}
 			pre.executeBatch(); //批量执行   
@@ -60,7 +49,7 @@ public class DataService {
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} finally {
-			jdbc.closeConnection();
+			JDBC.closeConnection();
 		}
 		return is;
 	}
@@ -73,16 +62,15 @@ public class DataService {
 	public boolean deleteAll() {
 		boolean is = false;
 		JDBC jdbc = new JDBC();
-		connection = jdbc.getConnection();
+		connection = JDBC.getConnection();
 		try {
 			pre = connection.prepareStatement("delete from TB");
 			pre.execute();
 			is = true;
-//			connection.close();
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} finally {
-			jdbc.closeConnection();
+			JDBC.closeConnection();
 		}
 		return is;
 	}
@@ -93,24 +81,23 @@ public class DataService {
 	 */
 	public Set<String> queryWord(List<String> list) {
 		Set<String> set=new LinkedHashSet<String>();
-		JDBC jdbc = new JDBC();
-		connection = jdbc.getConnection();
-		String sql="select * from TB where";
+		connection = JDBC.getConnection();
+		StringBuilder sql= new StringBuilder("select * from TB where");
 		int a=0;
 		for (String str : list) {
 			if(a!=0){
-				sql+=" and";
+				sql.append(" and");
 			}
 			if (IfIschinese.isChinese(str)) {
-				sql+=" word like '%"+str+"%'";
+				sql.append(" word like '%").append(str).append("%'");
 			}else{
-				sql+=" pinyin like '%"+str+"%'";
+				sql.append(" pinyin like '%").append(str).append("%'");
 			}
 			a++;
 		}
 		System.out.println(sql);
 		try {
-			pre = connection.prepareStatement(sql);
+			pre = connection.prepareStatement(sql.toString());
 			result = pre.executeQuery();
 			while (result.next()) {
 				String word = result.getString("word");
@@ -119,7 +106,7 @@ public class DataService {
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} finally {
-			jdbc.closeConnection();
+			JDBC.closeConnection();
 		}
 		return set;
 	}
@@ -130,7 +117,7 @@ public class DataService {
 	public List<WordBean> queryAll() {
 		List<WordBean> wordBeans = new ArrayList<WordBean>();
 		JDBC jdbc = new JDBC();
-		connection = jdbc.getConnection();
+		connection = JDBC.getConnection();
 		try {
 			pre = connection.prepareStatement("select * from TB");
 			result = pre.executeQuery();
@@ -151,7 +138,7 @@ public class DataService {
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} finally {
-			jdbc.closeConnection();
+			JDBC.closeConnection();
 		}
 		return wordBeans;
 	}
@@ -165,7 +152,7 @@ public class DataService {
 		List<TFIDFbean> list=new ArrayList<TFIDFbean>();
 		int sum=0;
 		JDBC jdbc = new JDBC();
-		connection = jdbc.getConnection();
+		connection = JDBC.getConnection();
 		//select filepath,sum(TF_IDF) as correlation from TB where word  in ('联想','价格战','高端') group by filepath ORDER BY sum(TF_IDF) desc
 		try {
 			StringBuilder sql=new StringBuilder();
@@ -205,7 +192,7 @@ public class DataService {
 		List<TFbean> list=new ArrayList<TFbean>();
 		int sum=0;
 		JDBC jdbc = new JDBC();
-		connection = jdbc.getConnection();
+		connection = JDBC.getConnection();
 		try {
 			StringBuilder sql=new StringBuilder();
 			sql.append("select filepath,sum(TF) as correlation from TB where word  in (");

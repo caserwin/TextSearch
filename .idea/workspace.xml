@@ -1,7 +1,103 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1de742ee-9a4b-4113-9367-49f0a7543476" name="Default" comment="" />
+    <list default="true" id="1de742ee-9a4b-4113-9367-49f0a7543476" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/db_myWBFL/db.lck" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/db_myWBFL/log/log.ctrl" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/db_myWBFL/log/log22.dat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/db_myWBFL/log/logmirror.ctrl" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/db_myWBFL/seg0/c10.dat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/db_myWBFL/seg0/c101.dat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/db_myWBFL/seg0/c111.dat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/db_myWBFL/seg0/c121.dat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/db_myWBFL/seg0/c130.dat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/db_myWBFL/seg0/c141.dat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/db_myWBFL/seg0/c150.dat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/db_myWBFL/seg0/c161.dat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/db_myWBFL/seg0/c171.dat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/db_myWBFL/seg0/c180.dat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/db_myWBFL/seg0/c191.dat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/db_myWBFL/seg0/c1a1.dat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/db_myWBFL/seg0/c1b1.dat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/db_myWBFL/seg0/c1c0.dat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/db_myWBFL/seg0/c1d1.dat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/db_myWBFL/seg0/c1e0.dat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/db_myWBFL/seg0/c1f1.dat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/db_myWBFL/seg0/c20.dat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/db_myWBFL/seg0/c200.dat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/db_myWBFL/seg0/c211.dat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/db_myWBFL/seg0/c221.dat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/db_myWBFL/seg0/c230.dat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/db_myWBFL/seg0/c241.dat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/db_myWBFL/seg0/c251.dat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/db_myWBFL/seg0/c260.dat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/db_myWBFL/seg0/c271.dat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/db_myWBFL/seg0/c281.dat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/db_myWBFL/seg0/c290.dat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/db_myWBFL/seg0/c2a1.dat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/db_myWBFL/seg0/c2b1.dat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/db_myWBFL/seg0/c2c1.dat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/db_myWBFL/seg0/c2d0.dat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/db_myWBFL/seg0/c2e1.dat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/db_myWBFL/seg0/c2f0.dat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/db_myWBFL/seg0/c300.dat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/db_myWBFL/seg0/c31.dat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/db_myWBFL/seg0/c311.dat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/db_myWBFL/seg0/c321.dat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/db_myWBFL/seg0/c331.dat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/db_myWBFL/seg0/c340.dat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/db_myWBFL/seg0/c351.dat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/db_myWBFL/seg0/c361.dat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/db_myWBFL/seg0/c371.dat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/db_myWBFL/seg0/c380.dat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/db_myWBFL/seg0/c391.dat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/db_myWBFL/seg0/c3a1.dat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/db_myWBFL/seg0/c3b1.dat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/db_myWBFL/seg0/c3c0.dat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/db_myWBFL/seg0/c3d1.dat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/db_myWBFL/seg0/c3e1.dat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/db_myWBFL/seg0/c3f1.dat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/db_myWBFL/seg0/c400.dat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/db_myWBFL/seg0/c41.dat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/db_myWBFL/seg0/c411.dat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/db_myWBFL/seg0/c421.dat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/db_myWBFL/seg0/c430.dat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/db_myWBFL/seg0/c441.dat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/db_myWBFL/seg0/c451.dat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/db_myWBFL/seg0/c461.dat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/db_myWBFL/seg0/c470.dat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/db_myWBFL/seg0/c481.dat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/db_myWBFL/seg0/c51.dat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/db_myWBFL/seg0/c60.dat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/db_myWBFL/seg0/c71.dat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/db_myWBFL/seg0/c81.dat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/db_myWBFL/seg0/c90.dat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/db_myWBFL/seg0/ca1.dat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/db_myWBFL/seg0/cb1.dat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/db_myWBFL/seg0/cc0.dat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/db_myWBFL/seg0/cd1.dat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/db_myWBFL/seg0/ce1.dat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/db_myWBFL/seg0/cf0.dat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/db_myWBFL/service.properties" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/ext_stopword.dic" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/dao/DataService.java" afterPath="$PROJECT_DIR$/src/dao/DataService.java" />
+      <change beforePath="$PROJECT_DIR$/src/dao/JDBC.java" afterPath="$PROJECT_DIR$/src/dao/JDBC.java" />
+      <change beforePath="$PROJECT_DIR$/src/gui/CheckUITF.java" afterPath="$PROJECT_DIR$/src/gui/CheckUITF.java" />
+      <change beforePath="$PROJECT_DIR$/src/gui/CheckUITFIDF.java" afterPath="$PROJECT_DIR$/src/gui/CheckUITFIDF.java" />
+      <change beforePath="$PROJECT_DIR$/src/gui/IfIschinese.java" afterPath="$PROJECT_DIR$/src/gui/IfIschinese.java" />
+      <change beforePath="$PROJECT_DIR$/src/gui/Main.java" afterPath="$PROJECT_DIR$/src/gui/Main.java" />
+      <change beforePath="$PROJECT_DIR$/src/javaBean/TFIDFbean.java" afterPath="$PROJECT_DIR$/src/javaBean/TFIDFbean.java" />
+      <change beforePath="$PROJECT_DIR$/src/javaBean/TFbean.java" afterPath="$PROJECT_DIR$/src/javaBean/TFbean.java" />
+      <change beforePath="$PROJECT_DIR$/src/javaBean/WordBean.java" afterPath="$PROJECT_DIR$/src/javaBean/WordBean.java" />
+      <change beforePath="$PROJECT_DIR$/src/operate/CalculateTFIDF.java" afterPath="$PROJECT_DIR$/src/operate/CalculateTFIDF.java" />
+      <change beforePath="$PROJECT_DIR$/src/operate/DataPreProcess.java" afterPath="$PROJECT_DIR$/src/operate/DataPreProcess.java" />
+      <change beforePath="$PROJECT_DIR$/src/operate/GetTime.java" afterPath="$PROJECT_DIR$/src/operate/GetTime.java" />
+      <change beforePath="$PROJECT_DIR$/src/operate/StopWordsProcess.java" afterPath="$PROJECT_DIR$/src/operate/StopWordsProcess.java" />
+      <change beforePath="$PROJECT_DIR$/src/operate/Time.java" afterPath="$PROJECT_DIR$/src/operate/Time.java" />
+      <change beforePath="$PROJECT_DIR$/src/operate/Tokenizer.java" afterPath="$PROJECT_DIR$/src/operate/Tokenizer.java" />
+    </list>
     <ignored path="$PROJECT_DIR$/bin/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -12,24 +108,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="JDBC.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/dao/JDBC.java">
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="384">
-              <caret line="35" column="21" lean-forward="true" selection-start-line="35" selection-start-column="21" selection-end-line="35" selection-end-column="21" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <marker date="1537667780388" expanded="true" signature="798:1020" ph="create table... TB" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/gui/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="156" column="35" lean-forward="true" selection-start-line="156" selection-start-column="35" selection-end-line="156" selection-end-column="35" />
+            <state relative-caret-position="300">
+              <caret line="20" column="6" lean-forward="false" selection-start-line="20" selection-start-column="6" selection-end-line="20" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -55,10 +138,23 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/operate/DataPreProcess.java" />
-        <option value="$PROJECT_DIR$/src/dao/JDBC.java" />
         <option value="$PROJECT_DIR$/src/dao/YY.java" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/src/operate/StopWordsProcess.java" />
+        <option value="$PROJECT_DIR$/src/operate/DataPreProcess.java" />
+        <option value="$PROJECT_DIR$/src/operate/GetTime.java" />
+        <option value="$PROJECT_DIR$/src/operate/Time.java" />
+        <option value="$PROJECT_DIR$/src/operate/Tokenizer.java" />
+        <option value="$PROJECT_DIR$/src/javaBean/WordBean.java" />
+        <option value="$PROJECT_DIR$/src/javaBean/TFbean.java" />
+        <option value="$PROJECT_DIR$/src/javaBean/TFIDFbean.java" />
+        <option value="$PROJECT_DIR$/src/dao/JDBC.java" />
+        <option value="$PROJECT_DIR$/src/dao/DataService.java" />
+        <option value="$PROJECT_DIR$/src/gui/CheckUITF.java" />
+        <option value="$PROJECT_DIR$/src/gui/CheckUITFIDF.java" />
+        <option value="$PROJECT_DIR$/src/gui/IfIschinese.java" />
         <option value="$PROJECT_DIR$/src/gui/Main.java" />
+        <option value="$PROJECT_DIR$/src/operate/CalculateTFIDF.java" />
       </list>
     </option>
   </component>
@@ -103,7 +199,7 @@
             <path>
               <item name="WBFLmy" type="b2602c69:ProjectViewProjectNode" />
               <item name="WBFLmy" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="res" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="WBFLmy" type="b2602c69:ProjectViewProjectNode" />
@@ -290,15 +386,16 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1537667411324</updated>
-      <workItem from="1537667422113" duration="645000" />
+      <workItem from="1537667422113" duration="2499000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="645000" />
+    <option name="totallyTimeSpent" value="2499000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1680" y="0" width="1920" height="1080" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -308,9 +405,9 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32969216" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32969216" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32969216" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32969216" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32969216" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21778488" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -337,23 +434,15 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="2" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/gui/Main.form">
       <provider selected="true" editor-type-id="ui-designer">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/operate/DataPreProcess.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-713">
-          <caret line="94" column="19" lean-forward="false" selection-start-line="94" selection-start-column="19" selection-end-line="94" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.project">
@@ -364,34 +453,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/operate/GetTime.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/operate/StopWordsProcess.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/gui/CheckUITF.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="32" column="40" lean-forward="false" selection-start-line="32" selection-start-column="40" selection-end-line="32" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/dao/JDBC.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -400,22 +461,201 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/gui/Main.java">
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_151.jdk/Contents/Home/src.zip!/java/lang/ThreadLocal.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="156" column="35" lean-forward="true" selection-start-line="156" selection-start-column="35" selection-end-line="156" selection-end-column="35" />
+        <state relative-caret-position="140">
+          <caret line="68" column="27" lean-forward="true" selection-start-line="68" selection-start-column="27" selection-end-line="68" selection-end-column="27" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ext_stopword.dic">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/ext_stopword.dic">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.fatjar">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.settings/org.eclipse.jdt.core.prefs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/operate/Tokenizer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" column="74" lean-forward="false" selection-start-line="26" selection-start-column="74" selection-end-line="26" selection-end-column="74" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/operate/Time.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/operate/StopWordsProcess.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#540#541#0" expanded="false" />
+            <element signature="e#561#562#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/operate/GetTime.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/operate/DataPreProcess.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-545">
+          <caret line="104" column="26" lean-forward="true" selection-start-line="104" selection-start-column="26" selection-end-line="104" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#2647#2648#0" expanded="false" />
+            <element signature="e#2682#2683#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/dao/JDBC.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="35" column="21" lean-forward="true" selection-start-line="35" selection-start-column="21" selection-end-line="35" selection-end-column="21" />
+        <state relative-caret-position="105">
+          <caret line="10" column="17" lean-forward="false" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1537667780388" expanded="true" signature="798:1020" ph="create table... TB" />
+            <element signature="imports" expanded="false" />
+            <marker date="1537669920090" expanded="true" signature="873:1095" ph="create table... TB" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dao/DataService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding>
+            <marker date="1537669920145" expanded="true" signature="889:961" ph="insert into TB... " />
+            <marker date="1537669920145" expanded="true" signature="1680:1694" ph="delete from TB... " />
+            <marker date="1537669920145" expanded="true" signature="2916:2932" ph="select * fro... TB" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gui/CheckUITF.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="17" lean-forward="false" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gui/CheckUITFIDF.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="45" lean-forward="true" selection-start-line="20" selection-start-column="45" selection-end-line="20" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gui/IfIschinese.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gui/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="53" column="3" lean-forward="true" selection-start-line="53" selection-start-column="3" selection-end-line="53" selection-end-column="3" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="method#initComponents#0;class#Main#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/javaBean/TFbean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/javaBean/TFIDFbean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/javaBean/WordBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="21" lean-forward="true" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/operate/CalculateTFIDF.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1200">
+          <caret line="80" column="0" lean-forward="false" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="6" lean-forward="false" selection-start-line="20" selection-start-column="6" selection-end-line="20" selection-end-column="6" />
+          <folding />
         </state>
       </provider>
     </entry>

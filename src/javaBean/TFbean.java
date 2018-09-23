@@ -1,13 +1,8 @@
-/**
- * 
- */
 package javaBean;
 
 /******************************************
- * @function：
  * @author hduxyd
  * @data:2014-5-12上午11:12:52
- * @department：杭州电子科技大学通信工程学院
  * @note:
  ******************************************/
 public class TFbean {

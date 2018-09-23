@@ -2,9 +2,11 @@ package operate;
 
 import java.text.DateFormat;
 import java.util.Date;
-
 import javax.swing.JLabel;
 
+/**
+ * @author hduxyd
+ */
 public class Time extends Thread {
 	JLabel jLabel;
 	boolean isstop = false;
@@ -14,13 +16,14 @@ public class Time extends Thread {
 		isstop = false;
 	}
 
+	@Override
 	public void run() {
 		while (true) {
-			if (isstop)
+			if (isstop) {
 				break;
+			}
 			Date now = new Date();
-			DateFormat d8 = DateFormat.getDateTimeInstance(DateFormat.MEDIUM,
-					DateFormat.MEDIUM);
+			DateFormat d8 = DateFormat.getDateTimeInstance(DateFormat.MEDIUM, DateFormat.MEDIUM);
 			String str8 = d8.format(now);
 			this.jLabel.setText(str8);
 		}

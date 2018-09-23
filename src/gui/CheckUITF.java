@@ -1,9 +1,3 @@
-/*
- * CheckUI.java
- *
- * Created on __DATE__, __TIME__
- */
-
 package gui;
 
 import java.awt.event.MouseAdapter;
@@ -21,7 +15,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  * 
- * @author __USER__
+ * @author hduxyd
  */
 public class CheckUITF extends JFrame {
 	private JPanel jPanel1 = new JPanel();;

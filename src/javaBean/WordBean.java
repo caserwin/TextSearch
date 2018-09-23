@@ -1,13 +1,8 @@
-/**
- * 
- */
 package javaBean;
 
 /******************************************
- * @function：
  * @author hduxyd
  * @data:2014-5-11上午09:49:27
- * @department：杭州电子科技大学通信工程学院
  * @note:
  ******************************************/
 public class WordBean {
