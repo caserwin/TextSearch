@@ -6,6 +6,7 @@ package javaBean;
  * @note:
  ******************************************/
 public class WordBean {
+
 	private String filepath;
 	private String word;
 	private int times;

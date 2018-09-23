@@ -6,6 +6,7 @@ package javaBean;
  * @note:
  ******************************************/
 public class TFbean {
+
 	private String filepath;
 	private double tf;
 	public String getFilepath() {

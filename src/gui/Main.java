@@ -25,10 +25,6 @@ import java.util.Set;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import javaBean.TFIDFbean;
-import javaBean.TFbean;
-import javaBean.WordBean;
-
 import javax.swing.ButtonGroup;
 import javax.swing.JDialog;
 import javax.swing.JFileChooser;
@@ -42,6 +38,9 @@ import javax.swing.JRadioButtonMenuItem;
 import javax.swing.UIManager;
 import javax.swing.filechooser.FileNameExtensionFilter;
 
+import javaBean.TFIDFbean;
+import javaBean.TFbean;
+import javaBean.WordBean;
 import opensource.jpinyin.PinyinFormat;
 import opensource.jpinyin.PinyinHelper;
 import operate.DataPreProcess;
@@ -55,21 +54,39 @@ import dao.DataService;
  * @author hduxyd
  */
 public class Main extends javax.swing.JFrame {
-    private static JMenuBar menuBar = null;
-    private static JMenu fileMenu = null;
-    private static JMenu setMenu = null;
-    private static JMenu helpMenu = null;
-    private static JMenuItem exitMenuItem = null;
-    private static JMenuItem CheckMenuItem1 = null;
-    private static JMenuItem aboutMenuItem = null;
-    private static JMenuItem setMenuItem = null;
-    private static JMenuItem setMenuItem1 = null;
-    private static JRadioButtonMenuItem setMenuItem2 = null;
-    private static JRadioButtonMenuItem setMenuItem3 = null;
-    private static JDialog aboutDialog = null;
-    private static JPanel aboutContentPane = null;
-    private static JLabel aboutVersionLabel = null;
-    private static JFileChooser jFileChooser1 = null;
+    private static JMenuBar menuBar;
+    private static JMenu fileMenu;
+    private static JMenu setMenu;
+    private static JMenu helpMenu;
+    private static JMenuItem exitMenuItem;
+    private static JMenuItem CheckMenuItem1;
+    private static JMenuItem aboutMenuItem;
+    private static JMenuItem setMenuItem;
+    private static JMenuItem setMenuItem1;
+    private static JRadioButtonMenuItem setMenuItem2;
+    private static JRadioButtonMenuItem setMenuItem3;
+    private static JDialog aboutDialog;
+    private static JPanel aboutContentPane;
+    private static JLabel aboutVersionLabel;
+    private static JFileChooser jFileChooser1;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JTabbedPane jTabbedPane1;
+    private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JTextArea jTextArea2;
+    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTextField2;
     private static String stopWordPath = "";
     private static String corpusPath = "";
     /**
@@ -78,11 +95,12 @@ public class Main extends javax.swing.JFrame {
     private static int a = 1;
     private static ButtonGroup bGroup = null;
     private static List<WordBean> wordBeans = null;
-    private static Map<String, List<String>> map = null;
+    private static Map<String[], List<String>> map = null;
     private static List<TFIDFbean> TFIDFbeanlist = null;
     private static List<TFbean> TFbeanlist = null;
-    private int width = (int) Toolkit.getDefaultToolkit().getScreenSize().getWidth() / 2;
-    private int height = (int) Toolkit.getDefaultToolkit().getScreenSize().getHeight() / 2;
+    private static int width = (int) Toolkit.getDefaultToolkit().getScreenSize().getWidth() / 2;
+    private static int height = (int) Toolkit.getDefaultToolkit().getScreenSize().getHeight() / 2;
+    private DataService dataService = new DataService();
 
     /**
      * Creates new form Main
@@ -99,6 +117,7 @@ public class Main extends javax.swing.JFrame {
         time.start();
         this.jLabel4.setCursor(new Cursor(Cursor.HAND_CURSOR));
         this.jLabel4.addMouseListener(new MouseAdapter() {
+            @Override
             public void mouseClicked(MouseEvent evt) {
                 jLabel4MouseClicked();
             }
@@ -111,11 +130,11 @@ public class Main extends javax.swing.JFrame {
         this.jTextField2.setEditable(false);
         setMenuItem3.setSelected(true);
         this.setResizable(false);
-        // System.out.println(this.getClass().getResource("\\").getPath());
         this.jButton2.setEnabled(true);
         this.jButton3.setEnabled(false);
 
         this.jTextField1.addKeyListener(new KeyAdapter() {
+            @Override
             public void keyPressed(KeyEvent evt) {
                 if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
                     showData();
@@ -130,7 +149,7 @@ public class Main extends javax.swing.JFrame {
         } else if (TFIDFbeanlist != null) {
             CheckUITFIDF checkUI = new CheckUITFIDF(TFIDFbeanlist);
             checkUI.setVisible(true);
-        } else if (TFbeanlist != null) {
+        } else {
             CheckUITF checkUI = new CheckUITF(TFbeanlist);
             checkUI.setVisible(true);
         }
@@ -156,12 +175,10 @@ public class Main extends javax.swing.JFrame {
             public void actionPerformed(ActionEvent e) {
                 jFileChooser1 = new JFileChooser();
                 jFileChooser1.setDialogTitle("选择停止词");
-                FileNameExtensionFilter filter = new FileNameExtensionFilter(
-                    "txt文件", "txt");
+                FileNameExtensionFilter filter = new FileNameExtensionFilter("txt文件", "txt");
                 jFileChooser1.setFileFilter(filter);
                 if (jFileChooser1.showOpenDialog(null) == 0) {
-                    stopWordPath = jFileChooser1.getSelectedFile().getPath()
-                                       + ".txt";
+                    stopWordPath = jFileChooser1.getSelectedFile().getPath() + ".txt";
                     System.out.println("stopWordPath:" + stopWordPath);
                 }
             }
@@ -175,8 +192,7 @@ public class Main extends javax.swing.JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 jFileChooser1 = new JFileChooser();
-                jFileChooser1
-                    .setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
+                jFileChooser1.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
                 jFileChooser1.setDialogTitle("选择文本资料库");
                 if (jFileChooser1.showOpenDialog(null) == 0) {
                     corpusPath = jFileChooser1.getSelectedFile().getPath();
@@ -235,11 +251,7 @@ public class Main extends javax.swing.JFrame {
         CheckMenuItem1.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                try {
-                    Runtime.getRuntime().exec("notepad.exe ext_stopword.dic");
-                } catch (IOException e1) {
-                    e1.printStackTrace();
-                }
+                Tool.openTxt("res/ext_stopword.dic");
             }
         });
 
@@ -263,13 +275,7 @@ public class Main extends javax.swing.JFrame {
             public void actionPerformed(ActionEvent e) {
                 JDialog aboutDialog = getAboutDialog();
                 aboutDialog.pack();
-                double width = Toolkit.getDefaultToolkit().getScreenSize()
-                                   .getWidth(); // 得到窗体的宽
-                double height = Toolkit.getDefaultToolkit().getScreenSize()
-                                    .getHeight();// 得到窗体的高
-                aboutDialog.setLocation(
-                    (int) (width - aboutDialog.getWidth()) / 2,
-                    (int) (height - aboutDialog.getHeight()) / 2);
+                aboutDialog.setLocationRelativeTo(null);
                 aboutDialog.setVisible(true);
             }
         });
@@ -280,7 +286,7 @@ public class Main extends javax.swing.JFrame {
     private static JDialog getAboutDialog() {
         aboutDialog = new JDialog();
         aboutDialog.setTitle("信息");
-        aboutDialog.setPreferredSize(new Dimension(211, 128));
+        aboutDialog.setPreferredSize(new Dimension(250, 140));
 
         aboutContentPane = new JPanel();
         aboutContentPane.setLayout(new BorderLayout());
@@ -291,8 +297,7 @@ public class Main extends javax.swing.JFrame {
     }
 
     private static Component getAboutVersionLabel() {
-        String string = "<html>Author :薛益定&&QQ593623983"
-                            + "<br>系统版本：文本资源查找软件V1.0";
+        String string = "<html>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Author:xyd&&casyd_xue@163.com<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;系统版本：文本资源查找软件V1.0";
         aboutVersionLabel = new JLabel(string, JLabel.CENTER);
         aboutVersionLabel.setHorizontalAlignment(2);
         aboutVersionLabel.setFont(new Font("Dialog", Font.PLAIN, 12));
@@ -620,8 +625,6 @@ public class Main extends javax.swing.JFrame {
         pack();
     }// </editor-fold>
 
-    // GEN-END:initComponents
-
     private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
     }
@@ -629,20 +632,18 @@ public class Main extends javax.swing.JFrame {
     @SuppressWarnings("static-access")
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {
         // 遍历map,并且封装好到集合wordbeans
-        for (String key : map.keySet()) {
+        for (String[] key : map.keySet()) {
             WordBean wordBean = new WordBean();
-            String[] strings = key.split("\\*");
             List<String> list = map.get(key);
-            wordBean.setFilepath(strings[0]);
-            wordBean.setWord(strings[1]);
+            wordBean.setFilepath(key[0]);
+            wordBean.setWord(key[1]);
             wordBean.setTimes(Integer.parseInt(list.get(0)));
             wordBean.setTF(Double.parseDouble(list.get(1)));
             wordBean.setTFIDF(Double.parseDouble(list.get(2)));
-            wordBean.setPinyin(PinyinHelper.convertToPinyinString(strings[1], "", PinyinFormat.WITHOUT_TONE));
+            wordBean.setPinyin(PinyinHelper.convertToPinyinString(key[1], "", PinyinFormat.WITHOUT_TONE));
             wordBeans.add(wordBean);
         }
         // 先删除数据框中所有记录，再写到数据库中
-        DataService dataService = new DataService();
         jTextArea2.append(GetTime.getNowtime() + "  开始删除原来的资料\n");
         jTextArea2.paintImmediately(jTextArea2.getBounds());
         boolean is = dataService.deleteAll();
@@ -653,7 +654,6 @@ public class Main extends javax.swing.JFrame {
         jTextArea2.append(GetTime.getNowtime() + "  开始写入数据库....\n");
         jTextArea2.paintImmediately(jTextArea2.getBounds());
         long a = System.currentTimeMillis();
-        System.out.println("--------------------");
         dataService.addtoDB(wordBeans);
         System.out.println(System.currentTimeMillis() - a);
         jTextArea2.append(GetTime.getNowtime() + "  写入完毕\n");
@@ -665,25 +665,21 @@ public class Main extends javax.swing.JFrame {
     private void jTextField2MouseClicked(java.awt.event.MouseEvent evt) {
         String filePath = "";
         jFileChooser1 = new JFileChooser();
-        jFileChooser1.setDialogTitle("选择资料文件.txt");
-        FileNameExtensionFilter filter = new FileNameExtensionFilter("txt文件", "txt");
-        jFileChooser1.setFileFilter(filter);
+        jFileChooser1.setDialogTitle("选择数据库文件");
+        jFileChooser1.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
         if (jFileChooser1.showOpenDialog(null) == 0) {
             filePath = jFileChooser1.getSelectedFile().getPath();
         }
         if (!"".equals(filePath)) {
             this.jTextField2.setText(filePath);
         }
-
+        dataService = new DataService(filePath);
         jTextArea2.append(GetTime.getNowtime() + "  已经选择好资料文件\n");
         jTextArea2.paintImmediately(jTextArea2.getBounds());
-
     }
 
-    // public static String filepath = null;
-
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {
-        wordBeans = new ArrayList<WordBean>();
+        wordBeans = new ArrayList<>();
         this.jTabbedPane1.setSelectedIndex(1);
         if ("".equals(stopWordPath)) {
             JOptionPane.showMessageDialog(null, "无选择停止词文件，选择默认停止词！");
@@ -695,18 +691,10 @@ public class Main extends javax.swing.JFrame {
         // 对文本资料库进行处理
         jTextArea2.append(GetTime.getNowtime() + "  正在计算数据.....\n");
         jTextArea2.paintImmediately(jTextArea2.getBounds());
-        DataPreProcess dataPreProcess = new DataPreProcess(stopWordPath,
-            corpusPath);
-        // filepath = corpusPath.substring(0, corpusPath.lastIndexOf("\\"))
-        // + "\\处理后的文本数据";
-        // File file = new File(filepath);
-        // if (!file.exists()) {
-        // file.mkdirs();
-        // }
+        DataPreProcess dataPreProcess = new DataPreProcess(stopWordPath, corpusPath);
         dataPreProcess.corpusProcess();
         // 得到文本资料处理后的文件map
         map = dataPreProcess.getwenbenziliao();
-        //
         jTextArea2.append(GetTime.getNowtime() + "  数据计算完成.....\n");
         jTextArea2.paintImmediately(jTextArea2.getBounds());
         this.jButton2.setEnabled(false);
@@ -718,10 +706,8 @@ public class Main extends javax.swing.JFrame {
     }
 
     /**
-     * @function:数据展示 统计计数
+     * @function:数据展示
      */
-    private int sum = 0;
-
     private void showData() {
         this.jTextArea2.setText("");
         this.jTabbedPane1.setSelectedIndex(1);
@@ -730,18 +716,11 @@ public class Main extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "输入为空!");
             return;
         }
-//		Set<String> set = matchPattern(str);
-//		if (set.size()==0) {
-//			ResOutput(str,str);
-//			return;
-//		}
-//		for (String string: set) {
-        ResOutput(str, str);
-//		}
+        resOutput(str, str);
     }
 
-    public void ResOutput(String string, String str) {
-
+    private void resOutput(String string, String str) {
+        int sum = 0;
         StringBuilder result = new StringBuilder();
         // 分词
         Reader input = new StringReader(string);
@@ -755,67 +734,54 @@ public class Main extends javax.swing.JFrame {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        this.jTextArea2
-            .append("---------------------------------------------------\n");
+        this.jTextArea2.append("---------------------------------------------------\n");
         jTextArea2.paintImmediately(jTextArea2.getBounds());
-        this.jTextArea2
-            .append(GetTime.getNowtime() + "  " + str + "的分词结果：" + result + "\n");
+        this.jTextArea2.append(GetTime.getNowtime() + "  " + str + "的分词结果：" + result + "\n");
         jTextArea2.paintImmediately(jTextArea2.getBounds());
-        this.jTextArea2
-            .append("---------------------------------------------------\n");
+        this.jTextArea2.append("---------------------------------------------------\n");
         jTextArea2.paintImmediately(jTextArea2.getBounds());
         // 查询数据库中的结果
         String[] strings = result.toString().split("\\|");
-        DataService dService = new DataService();
         if (a == 1) {
             long start = System.currentTimeMillis();
-            TFIDFbeanlist = dService.queryTextByTfidf(strings);
+            TFIDFbeanlist = dataService.queryTextByTfidf(strings);
             for (TFIDFbean tfidFbean : TFIDFbeanlist) {
                 if (sum == 10) {
                     break;
                 }
-                this.jTextArea2.append(GetTime.getNowtime() + "  文件路径："
-                                           + tfidFbean.getFilepath() + "  相关性："
-                                           + tfidFbean.getTfidf() + "\n");
+                this.jTextArea2.append(GetTime.getNowtime() + "  文件路径：" + tfidFbean.getFilepath() + "  相关性：" + tfidFbean.getTfidf() + "\n");
                 this.jTextArea2.append(readFromTxt(tfidFbean.getFilepath()));
-                this.jTextArea2
-                    .append("---------------------------------------------------\n");
-                // jTextArea2.paintImmediately(jTextArea2.getBounds());
+                this.jTextArea2.append("---------------------------------------------------\n");
+                jTextArea2.paintImmediately(jTextArea2.getBounds());
                 sum++;
             }
-            this.jTextArea2.append("一共花费时间："
-                                       + (System.currentTimeMillis() - start) + "ms\n");
+            this.jTextArea2.append("一共花费时间：" + (System.currentTimeMillis() - start) + "ms\n");
         } else if (a == 0) {
             long start = System.currentTimeMillis();
-            TFbeanlist = dService.queryTextByTF(strings);
+            TFbeanlist = dataService.queryTextByTF(strings);
             for (TFbean tFbean : TFbeanlist) {
                 if (sum == 10) {
                     break;
                 }
-                this.jTextArea2.append(GetTime.getNowtime() + "  文件路径："
-                                           + tFbean.getFilepath() + "  相关性：" + tFbean.getTf()
-                                           + "\n");
+                this.jTextArea2.append(GetTime.getNowtime() + "  文件路径：" + tFbean.getFilepath() + "  相关性：" + tFbean.getTf() + "\n");
                 this.jTextArea2.append(readFromTxt(tFbean.getFilepath()));
-                this.jTextArea2
-                    .append("---------------------------------------------------\n");
+                this.jTextArea2.append("---------------------------------------------------\n");
                 sum++;
             }
-            this.jTextArea2.append("一共花费时间："
-                                       + (System.currentTimeMillis() - start) + "ms\n");
+            this.jTextArea2.append("一共花费时间：" + (System.currentTimeMillis() - start) + "ms\n");
         }
     }
 
 
     private Set<String> matchPattern(String word) {
-        List<String> list = new ArrayList<String>();
-        Pattern p = Pattern.compile("[\u4e00-\u9fa5]+|\\d+|[a-zA-Z]+");
+        List<String> list = new ArrayList<>();
+        String pattern = "[\u4e00-\u9fa5]+|\\d+|[a-zA-Z]+";
+        Pattern p = Pattern.compile(pattern);
         Matcher m = p.matcher(word);
         while (m.find()) {
             list.add(m.group());
         }
-        DataService dService = new DataService();
-        Set<String> set = dService.queryWord(list);
-        return set;
+        return dataService.queryWord(list);
     }
 
     private String readFromTxt(String path) {
@@ -826,12 +792,12 @@ public class Main extends javax.swing.JFrame {
             BufferedReader bReader = new BufferedReader(new InputStreamReader(
                 new FileInputStream(path), "GBK"));
             while ((read = bReader.readLine()) != null) {
-                if (!read.equals("")) {
+                if (!"".equals(read)) {
                     if (a == 3) {
-                        readStr.append(read + "....\n");
+                        readStr.append(read).append("....\n");
                         break;
                     } else {
-                        readStr.append(read + "\n");
+                        readStr.append(read).append("\n");
                     }
                     a++;
                 }
@@ -850,8 +816,7 @@ public class Main extends javax.swing.JFrame {
             @Override
             public void run() {
                 try {
-                    UIManager.setLookAndFeel(UIManager
-                                                 .getSystemLookAndFeelClassName());
+                    UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
@@ -859,27 +824,4 @@ public class Main extends javax.swing.JFrame {
             }
         });
     }
-
-    // GEN-BEGIN:variables
-    // Variables declaration - do not modify
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JSeparator jSeparator1;
-    private javax.swing.JTabbedPane jTabbedPane1;
-    private javax.swing.JTextArea jTextArea1;
-    private javax.swing.JTextArea jTextArea2;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    // End of variables declaration//GEN-END:variables
-
 }

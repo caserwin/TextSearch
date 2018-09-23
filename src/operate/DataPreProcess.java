@@ -21,19 +21,12 @@ public class DataPreProcess {
     /*
      *用于记录每个文件的内容，,并且进行分词，去除停止词，计算每个词出现的次数
      */
-    private static Map<String, List<String>> wenbenziliao = null;
+    private static Map<String[], List<String>> wenbenziliao = null;
 
     public DataPreProcess(String stopWordPath, String corpusPath) {
         DataPreProcess.stopWordPath = stopWordPath;
         DataPreProcess.corpusPath = corpusPath;
-//		this.jTextArea=jTextArea;
-//		jTextArea.append("正在计算数据的TF和TF-IDF....\n");
     }
-//	public DataPreProcess(String stopWordPath, String corpusPath){
-//		this.stopWordPath = stopWordPath;
-//		this.corpusPath = corpusPath;
-//	}
-
     /**
      * @function:处理资料
      */
@@ -54,16 +47,17 @@ public class DataPreProcess {
         // 用于记录每个单词在多少个文本中出现
         Map<String, Integer> wordCountList = new HashMap<>();
         for (File file : filePathList) {
-            String mapPathAndName;
+            String[] mapPathAndName = new String[2];
             Map<String, Long> wordList = readTxt(file.getPath());
             for (String key : wordList.keySet()) {
-                List<String> list = new ArrayList<String>();
+                List<String> list = new ArrayList<>();
                 if (!(wordCountList.containsKey(key))) {
                     wordCountList.put(key, 1);
                 } else {
                     wordCountList.put(key, wordCountList.get(key) + 1);
                 }
-                mapPathAndName = file.getPath() + "*" + key;
+                mapPathAndName[0] = file.getPath();
+                mapPathAndName[1] = key;
                 list.add(wordList.get(key).toString());
                 list.add(String.valueOf(countTF(wordList, key)));
                 wenbenziliao.put(mapPathAndName, list);
@@ -75,15 +69,15 @@ public class DataPreProcess {
         countTFIDF(wordIDFList);
     }
 
-    public Map<String, List<String>> getwenbenziliao() {
+    public Map<String[], List<String>> getwenbenziliao() {
         return wenbenziliao;
     }
 
     private void countTFIDF(Map<String, Float> wordIDFList) {
-        for (String key : wenbenziliao.keySet()) {
-            String[] strings = key.split("\\*");
+        for (String[] key : wenbenziliao.keySet()) {
             List<String> list = wenbenziliao.get(key);
-            float ti = Float.parseFloat(list.get(1)) * wordIDFList.get(strings[1]);
+            float ti = 0;
+            ti = Float.parseFloat(list.get(1)) * wordIDFList.get(key[1]);
             list.add(String.valueOf(ti));
             wenbenziliao.put(key, list);
         }
@@ -122,7 +116,6 @@ public class DataPreProcess {
                 readString.append(read);
             }
             // 进行分词，进行去除停止词，words记录下每个文档的分词(key)和词频(value)！
-            Tokenizer tokenizer = new Tokenizer();
             words = Tokenizer.segStr(readString.toString(), stopWordPath);
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "读取文件出错！");
