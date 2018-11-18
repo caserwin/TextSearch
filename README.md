@@ -1,4 +1,9 @@
 # TextSearch
+## 使用演示
+可能需要稍等一会儿。
+
+![](https://github.com/caserwin/TextSearch/raw/master/data/text_search_demo.gif)
+
 ## 说明
 项目最初是基于 Myeclipse 的matisse插件构建GUI。后期转为IDEA项目，可以用JFormDesigner 重新构建用户界面。
 
@@ -8,6 +13,3 @@
 
 ## 搜狗语料库资料
 链接: https://pan.baidu.com/s/1icoAHlMUZOZ2O3HxhPphdQ 提取码: 7tmn
-
-## 使用演示
-![](https://github.com/caserwin/TextSearch/raw/master/data/text_search_demo.gif)
